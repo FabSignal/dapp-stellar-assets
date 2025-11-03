@@ -1,4 +1,4 @@
-🌟 dApp Stellar Assets Nativos
+# dApp Stellar Assets Nativos
 
 Aplicación descentralizada (dApp) construida con **Next.js 15**, **Stellar SDK** y **Supabase**, diseñada para la gestión de *assets nativos* en la red **Stellar Testnet**.  
 Permite conectar una wallet **Freighter**, emitir activos y administrar balances de prueba en un entorno seguro.
