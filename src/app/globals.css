@@ -1,0 +1,161 @@
+/* src/app/globals.css */
+
+@import "tailwindcss";
+
+:root {
+
+  --brand-navy: #2e003e;           /* Fondo principal */
+  --brand-purple-dark: #6a0572;    /* Cards */
+  --brand-purple-mid: #3a1c71;     /* Elementos */
+  --brand-purple-light: #af5279;   /* Botones */
+  --brand-lavender: #d76d77;       /* Bordes y acentos */
+  --brand-lavender-light: #ffd6a5; /* Texto */
+  
+
+  --color-primary: var(--brand-purple-mid);
+  --color-secondary: var(--brand-purple-light);
+  
+ 
+  --text-primary: #ffffff;
+  --text-secondary: var(--brand-lavender-light);
+  --text-muted: var(--brand-lavender);
+
+  --opacity-glass-strong: 0.95;
+  --opacity-glass-medium: 0.8;
+  --opacity-glass-light: 0.4;
+  --opacity-glass-subtle: 0.25;
+  --opacity-glass-ultra-light: 0.15;
+  
+  --opacity-border-strong: 0.5;
+  --opacity-border-medium: 0.3;
+  --opacity-border-light: 0.2;
+  
+
+  --gradient-bg-start: var(--brand-navy);
+  --gradient-bg-middle: var(--brand-navy);
+  --gradient-bg-end: var(--brand-purple-dark);
+  
+  --gradient-card-start: var(--brand-purple-dark);
+  --gradient-card-end: var(--brand-purple-mid);
+  
+  --gradient-btn-start: var(--brand-purple-mid);
+  --gradient-btn-end: var(--brand-purple-light);
+  
+  --gradient-btn-hover-start: var(--brand-purple-light);
+  --gradient-btn-hover-end: var(--brand-lavender);
+  
+  --gradient-success-start: var(--brand-purple-light);
+  --gradient-success-end: var(--brand-lavender);
+  
+  /* ========================================
+     BORDER COLORS
+     ======================================== */
+  --border-primary: rgb(from var(--brand-lavender) r g b / var(--opacity-border-medium));
+  --border-secondary: rgb(from var(--brand-lavender) r g b / var(--opacity-border-light));
+  --border-error: rgb(from #ef4444 r g b / var(--opacity-border-strong));
+  
+  /* ========================================
+     BACKGROUND COLORS
+     ======================================== */
+  --bg-card-dark: rgb(from var(--brand-navy) r g b / var(--opacity-glass-strong));
+  --bg-glass-medium: rgb(from var(--brand-navy) r g b / var(--opacity-glass-medium));
+  --bg-glass-light: rgb(from var(--brand-purple-dark) r g b / var(--opacity-glass-light));
+  --bg-success: rgb(from var(--brand-purple-light) r g b / var(--opacity-glass-subtle));
+  --bg-error: rgb(from #ef4444 r g b / var(--opacity-glass-ultra-light));
+  --bg-disabled: rgb(from var(--brand-purple-dark) r g b / 0.5);
+  
+
+  --shadow-strong: rgb(from #000000 r g b / 0.4);
+  --shadow-medium: rgb(from var(--brand-purple-light) r g b / 0.5);
+  
+ 
+  --blur-strong: 20px;
+  --blur-medium: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg, 
+    var(--gradient-bg-start) 0%, 
+    var(--gradient-bg-middle) 50%, 
+    var(--gradient-bg-end) 100%
+  );
+  background-attachment: fixed;
+  color: var(--text-secondary);
+}
+
+.card-dark {
+  background: var(--bg-card-dark);
+  backdrop-filter: blur(var(--blur-strong));
+  border: 2px solid var(--border-primary);
+  box-shadow: 0 8px 32px var(--shadow-strong);
+}
+
+.card-success {
+  background: linear-gradient(
+    135deg, 
+    var(--bg-success) 0%, 
+    var(--bg-success) 100%
+  );
+  backdrop-filter: blur(var(--blur-strong));
+  border: 2px solid var(--brand-lavender);
+}
+
+.card-gradient {
+  background: linear-gradient(
+    135deg, 
+    rgb(from var(--gradient-card-start) r g b / var(--opacity-glass-strong)) 0%, 
+    rgb(from var(--gradient-card-end) r g b / var(--opacity-glass-strong)) 100%
+  );
+  backdrop-filter: blur(var(--blur-strong));
+  border: 2px solid var(--border-primary);
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg, 
+    var(--gradient-btn-start) 0%, 
+    var(--gradient-btn-end) 100%
+  );
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg, 
+    var(--gradient-btn-hover-start) 0%, 
+    var(--gradient-btn-hover-end) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px var(--shadow-medium);
+}
+
+.btn-primary:disabled {
+  background: var(--bg-disabled);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.glass-header {
+  background: var(--bg-glass-medium);
+  backdrop-filter: blur(var(--blur-strong));
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.glass-info {
+  background: var(--bg-glass-light);
+  backdrop-filter: blur(var(--blur-medium));
+  border: 1px solid var(--border-primary);
+}
+
+.alert-error {
+  background: var(--bg-error);
+  border: 2px solid var(--border-error);
+}
+
+:root { --bg-glass-medium: #0f0c2999; }
+.glass-header { background: var(--bg-glass-medium) !important; background-color: var(--bg-glass-medium) !important; }
+
