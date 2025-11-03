@@ -47,16 +47,10 @@
   --gradient-success-start: var(--brand-purple-light);
   --gradient-success-end: var(--brand-lavender);
   
-  /* ========================================
-     BORDER COLORS
-     ======================================== */
   --border-primary: rgb(from var(--brand-lavender) r g b / var(--opacity-border-medium));
   --border-secondary: rgb(from var(--brand-lavender) r g b / var(--opacity-border-light));
   --border-error: rgb(from #ef4444 r g b / var(--opacity-border-strong));
   
-  /* ========================================
-     BACKGROUND COLORS
-     ======================================== */
   --bg-card-dark: rgb(from var(--brand-navy) r g b / var(--opacity-glass-strong));
   --bg-glass-medium: rgb(from var(--brand-navy) r g b / var(--opacity-glass-medium));
   --bg-glass-light: rgb(from var(--brand-purple-dark) r g b / var(--opacity-glass-light));
@@ -130,7 +124,7 @@ body {
     var(--gradient-btn-hover-end) 100%
   );
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px var(--shadow-medium);
+  box-shadow: brightness(0.92);
 }
 
 .btn-primary:disabled {

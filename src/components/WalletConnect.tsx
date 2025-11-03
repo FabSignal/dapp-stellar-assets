@@ -163,9 +163,9 @@ export default function WalletConnect({ onConnect }: WalletConnectProps) {
           <p className="text-sm text-[var(--brand-lavender-light)] font-mono break-all">
             {formatAddress(publicKey)}
           </p>
-          <p className="text-xs text-[var(--text-muted)] mt-2">
+          {/* <p className="text-xs text-[var(--text-muted)] mt-2">
             Public Key: {publicKey}
-          </p>
+          </p> */}
         </div>
       )}
     </div>
