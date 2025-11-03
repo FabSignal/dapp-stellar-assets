@@ -30,7 +30,7 @@ export default function Stepper({ steps, onStepClick }: StepperProps) {
         </p>
       </div>
 
-      {/* Steps list */}
+      {/* Lista dde pasos */}
       <nav className="flex-1 py-6 space-y-2">
         {steps.map((step, index) => {
           const isActive = step.status === "active";
@@ -54,7 +54,7 @@ export default function Stepper({ steps, onStepClick }: StepperProps) {
               transition={{ delay: index * 0.1 }}
             >
               <div className="flex items-start gap-3">
-                {/* Step indicator circle */}
+                {/* Círculo indicador de  paso */}
                 <div className="relative flex-shrink-0 mt-0.5">
                   <div
                     className={`
@@ -82,7 +82,7 @@ export default function Stepper({ steps, onStepClick }: StepperProps) {
                     )}
                   </div>
 
-                  {/* Connecting line */}
+                  {/* Conección línea */}
                   {index < steps.length - 1 && (
                     <div className="absolute left-1/2 top-full w-[2px] h-8 -translate-x-1/2">
                       <div className="w-full h-full bg-[rgba(203,187,246,0.1)]" />
@@ -97,7 +97,7 @@ export default function Stepper({ steps, onStepClick }: StepperProps) {
                     </div>
                   )}
 
-                  {/* Active pulse */}
+                  {/* Pulso */}
                   {isActive && (
                     <motion.div
                       className="absolute inset-0 rounded-full border-2 border-[var(--brand-lavender)]"
@@ -107,7 +107,7 @@ export default function Stepper({ steps, onStepClick }: StepperProps) {
                   )}
                 </div>
 
-                {/* Step content */}
+                {/* Contenido */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <h4
@@ -139,7 +139,7 @@ export default function Stepper({ steps, onStepClick }: StepperProps) {
         })}
       </nav>
 
-      {/* Progress bar footer */}
+      {/* Barra de progreso */}
       <div className="pt-6 border-t border-[rgba(203,187,246,0.2)]">
         <div className="flex items-center gap-3 mb-2">
           <div className="flex-1 h-1.5 bg-[rgba(203,187,246,0.1)] rounded-full overflow-hidden">

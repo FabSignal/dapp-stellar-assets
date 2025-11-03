@@ -1,4 +1,17 @@
-## 📋 Requisitos Previos
+🌟 dApp Stellar Assets Nativos
+
+Aplicación descentralizada (dApp) construida con **Next.js 15**, **Stellar SDK** y **Supabase**, diseñada para la gestión de *assets nativos* en la red **Stellar Testnet**.  
+Permite conectar una wallet **Freighter**, emitir activos y administrar balances de prueba en un entorno seguro.
+
+## Tecnologías Principales
+
+- **Next.js 15** – Framework React de nueva generación con app router.  
+- **Stellar SDK** – Interacción directa con la red Stellar Testnet.  
+- **Freighter API** – Conexión segura con wallet del usuario.  
+- **Supabase** – Backend as a Service para autenticación y persistencia.  
+- **Vercel** – Despliegue serverless optimizado para Next.js.
+
+## Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:
 
@@ -9,7 +22,7 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ---
 
-## 🚀 Instalación
+## Instalación
 
 ### 1. Clonar el repositorio
 ```bash
@@ -35,7 +48,7 @@ npm install
 }
 ```
 
-> 💡 **Nota**: Si instalaste el proyecto antes de noviembre 2024 y tienes errores, ejecuta:
+> 💡 **Nota**: Si tienes errores y tus versiones no coincide , ejecuta:
 > ```bash
 > rm -rf node_modules package-lock.json
 > npm install
@@ -49,8 +62,8 @@ NEXT_PUBLIC_SUPABASE_URL=tu_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_supabase_anon_key
 ```
 
-### 5. Ejecutar en modo desarrollo
-```bash
+### 5. Ejecutar 
+```
 npm run dev
 ```
 
@@ -58,7 +71,48 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 ---
 
-## 🔧 Solución de Problemas Comunes
+## Estructura del Proyecto
+
+```
+dapp-stellar-assets/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx          # Página principal
+│   │   ├── layout.tsx         # Layout global
+│   │   └── globals.css        # Estilos globales
+│   │
+│   ├── components/
+│   │   ├── WalletConnect.tsx  # Conectar wallet
+│   │   ├── AssetBalance.tsx   # Ver balance
+│   │   ├── CreateTrustline.tsx # Crear trustline
+│   │   ├── PathPayment.tsx    # Path payments (opcional)
+│   │   ├── Spinner.tsx        # Loading spinner
+│   │   └── Stepper.tsx        # Paso a paso
+│   │
+│   └── lib/
+│       ├── supabase.ts        # Cliente de Supabase
+│       └── constants.ts       # Constantes (assets, issuers)
+│
+│
+├── .env.local                 # Variables de entorno
+├── package.json
+├── next.config.js
+└── README.md
+```
+---
+
+## 🔐 Variables de Entorno
+
+Ejemplo de archivo de configuración local:
+
+```bash
+# .env.local.example
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
+```
+---
+
+## Solución de Problemas Comunes
 
 ### Error: "Module '@stellar/freighter-api' has no exported member 'getPublicKey'"
 
@@ -83,7 +137,7 @@ npm install @stellar/freighter-api@latest
 
 ---
 
-## 📚 Documentación de la API
+## Documentación de la API
 
 - [Stellar SDK Documentation](https://stellar.github.io/js-stellar-sdk/)
 - [Freighter API Documentation](https://docs.freighter.app/)
@@ -99,3 +153,8 @@ npm install @stellar/freighter-api@latest
 - **Freighter**: Asegúrate de que tu extensión Freighter esté configurada en **Testnet** (no Mainnet).
 
 ---
+
+## Licencia
+
+Este proyecto está disponible bajo la licencia **MIT**.
+
